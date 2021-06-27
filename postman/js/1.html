@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>POST-MAN</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PostMan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center my-3 text-uppercase">Welcome to Postman</h1>
+    </div>
+    <div class="container">
+        <!-- //url -->
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="urlr" placeholder="Enter url Address..">
+            </div>
+        </div>
+
+        <!-- request post/get  -->
+
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Request</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="type" id="postr" value="GET" checked>
+                        <label class="form-check-label" for="get">
+                            GET
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="type" id="getr" value="POST">
+                        <label class="form-check-label" for="post">
+                            POST
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- <content-type>====</content-type> -->
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Content Types</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ctype" id="jsonr" value="json" checked>
+                        <label class="form-check-label" for="json">
+                            JSON
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ctype" id="paramr" value="param">
+                        <label class="form-check-label" for="param">
+                            Custom Parameters
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- it is content type to adding a new valur -->
+        <div id="parameterbox">
+
+            <div class="form-row">
+
+                <legend class="col-form-label col-sm-2 pt-0">PARAMETER</legend>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="parameter1" placeholder="Enter your parameter1">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="parameter2" placeholder="Enter your parameter2">
+                </div>
+                <button class="btn btn-primary ">+</button>
+            </div>
+
+        </div>
+
+        <div class="my-4" id="requestjsonbox">
+            <div class="form-group row">
+                <label for="requestjson" class="col-sm-2 col-form-label">Enter Request JSON</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="requestjson" rows="3"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- button for fetch api -->
+        <div class="form-group row text-center d-block>
+            <div class="col-sm-10 ">
+                <button class="btn btn-primary btn-lg" id="submit"> Submit</button>
+            </div>
+        </div>
+
+        <!-- //resonces box....................... -->
+
+        
+        <div class="my-4" id="responcesjsonbox">
+            <div class="form-group row">
+                <label for="Responcesjson" class="col-sm-2 col-form-label">Responces</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="responcesjson" rows="3"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- //////////////////////////////////////////////jjsssssss////////////////////////////// -->
+
+
+console.log('This is my project 6 from JavaScript course');
+
+// Utility functions:
+// 1. Utility function to get DOM element from string
+function getElementFromString(string) {
+    let div = document.createElement('div');
+    div.innerHTML = string;
+    return div.firstElementChild;
+}
+
+// Initialize no of parameters
+let addedParamCount = 0;
+
+// Hide the parameters box initially
+let parametersBox = document.getElementById('parametersBox');
+parametersBox.style.display = 'none';
+
+// If the user clicks on params box, hide the json box
+let paramsRadio = document.getElementById('paramsRadio');
+paramsRadio.addEventListener('click', () => {
+    document.getElementById('requestJsonBox').style.display = 'none';
+    document.getElementById('parametersBox').style.display = 'block';
+})
+
+// If the user clicks on json box, hide the params box
+let jsonRadio = document.getElementById('jsonRadio');
+jsonRadio.addEventListener('click', () => {
+    document.getElementById('requestJsonBox').style.display = 'block';
+    document.getElementById('parametersBox').style.display = 'none';
+})
+
+// If the user clicks on + button, add more parameters
+let addParam = document.getElementById('addParam');
+addParam.addEventListener('click', () => {
+    let params = document.getElementById('params');
+    let string = `<div class="form-row my-2">
+                    <label for="url" class="col-sm-2 col-form-label">Parameter ${addedParamCount + 2}</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="parameterKey${addedParamCount + 2}" placeholder="Enter Parameter ${addedParamCount + 2} Key">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="parameterValue${addedParamCount + 2}" placeholder="Enter Parameter ${addedParamCount + 2} Value">
+                    </div>
+                    <button class="btn btn-primary deleteParam"> - </button>
+                    </div>`;
+    // Convert the element string to DOM node
+    let paramElement = getElementFromString(string);
+    params.appendChild(paramElement);
+    // Add an event listener to remove the parameter on clicking - button
+    let deleteParam = document.getElementsByClassName('deleteParam');
+    for (item of deleteParam) {
+        item.addEventListener('click', (e) => {
+            // TODO: add a confirmation box to confirm parameter deletion
+            e.target.parentElement.remove();
+        })
+    }
+    addedParamCount++;
+})
+
+// If the user clicks on submit button
+let submit = document.getElementById('submit');
+submit.addEventListener('click', () => {
+    // Show please wait in the response box to request patience from the user
+    // document.getElementById('responseJsonText').value = "Please wait.. Fetching response...";
+    document.getElementById('responsePrism').innerHTML = "Please wait.. Fetching response...";
+
+    // Fetch all the values user has entered
+    let url = document.getElementById("url").value;
+    let requestType = document.querySelector("input[name='requestType']:checked").value;
+    let contentType = document.querySelector("input[name='contentType']:checked").value;
+ 
+    // If user has used params option instead of json, collect all the parameters in an object
+    if (contentType == 'params') {
+        data = {};
+        for (let i = 0; i < addedParamCount + 1; i++) {
+            if (document.getElementById('parameterKey' + (i + 1)) != undefined) {
+                let key = document.getElementById('parameterKey' + (i + 1)).value;
+                let value = document.getElementById('parameterValue' + (i + 1)).value;
+                data[key] = value; 
+            }
+        }
+        data = JSON.stringify(data);
+    }
+    else {
+        data = document.getElementById('requestJsonText').value;
+    }
+
+    // Log all the values in the console for debugging
+    console.log('URL is ', url);
+    console.log('requestType is ', requestType);
+    console.log('contentType is ', contentType);
+    console.log('data is ', data);
+
+    // if the request type is get, invoke fetch api to create a post request
+    if (requestType=='GET'){
+        fetch(url, {
+            method: 'GET',   
+        })
+        .then(response=> response.text())
+        .then((text) =>{
+            // document.getElementById('responseJsonText').value = text;
+            document.getElementById('responsePrism').innerHTML = text;
+            Prism.highlightAll();
+        });
+    }
+
+    else{
+        fetch(url, {
+            method: 'POST', 
+            body: data,
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+              }  
+        })
+        .then(response=> response.text())
+        .then((text) =>{
+            // document.getElementById('responseJsonText').value = text;
+            document.getElementById('responsePrism').innerHTML = text;
+            Prism.highlightAll();
+        });
+
+    }
+
+
+});
+

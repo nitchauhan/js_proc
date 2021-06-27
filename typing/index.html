@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>TyppingSpeed..</title>
+
+</head>
+
+<body>
+
+    <div class="clock">
+      
+        <p id="showClock"></p>
+        <button class="btnn" onclick="clearInterval(clocke)">checkout</button>
+        <script>
+            var clocke = setInterval(clocktiming,1000)
+
+            function clocktiming(){
+                var d = new Date();
+                var nitin = d.toLocaleTimeString();
+                document.getElementById('showClock').innerHTML = nitin;
+            }
+        
+        </script>
+        
+    </div>
+    <div class="mainDiv">
+        <div class="centerDiv">
+            <h1>Welcome To Typing Speed Tesr</h1>
+            <br>
+            <h2 id="msg"></h2>
+            <br>
+            <textarea name="mywords" id="mywords" cols="100" rows="10">
+
+            </textarea>
+            <br>
+            <button id="btn" class="mainbtn">Start</button>
+        </div>
+    </div>
+    <br><br>
+    
+
+</body>
+<script src="index.js"></script>
+
+</html>

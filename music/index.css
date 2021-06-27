@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(68, 109, 109);
+    padding: 30px 0;
+}
+main{
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+    /* position: relative; */
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div{
+    width: 30%;
+     height:100vh;
+     box-shadow:  2px 2px 5px rgb(78, 71, 71);
+     border-radius: 10px;
+     cursor: pointer;
+     background-size: cover;
+     margin: 5px;
+
+}
+.a{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/1.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.b{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/2.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.c{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/3.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.d{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/4.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.e{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/5.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.f{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/6.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+
+.g{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: absolute;; */
+}
+
+.h{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/8.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.i{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/9.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.j{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/1.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.k{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/2.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
+
+.l{
+    width: 30%;
+    height: 150px;
+    background-image: url('/img/3.jpg');
+    background-repeat: no-repeat;
+    /* position: absolute;; */
+}
